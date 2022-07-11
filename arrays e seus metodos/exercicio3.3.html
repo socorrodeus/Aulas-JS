@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script>
+/*3. Drofo e Topper estao em uma aventura magica. Faca um programa que contenha um inventario para cada um dos dois aventureiros
+ - esse inventario sera um array.
+Drofo tera um anel da invisibilidade, dois pares de botas magicas, uma pocao do sono e duas pocoes da inocencia em seu inventario e nessa ordem. 
+Torper tera uma capa da invisibilidade, uma pedra do despertar,  uma varinha das varinhas, uma pocao da inocencia e 
+duas pocees da mentira e nessa ordem. 
+
+No meio de sua jornada, Torper consumiu uma das pocoes da mentira, perdeu sua pedra e ganhou um par de botar magicas do Drofo
+, achou um escudo magico e uma espada magica. 
+Descreva cada uma das acoes acima. utilizando codigo (utilize comentarios para ficar mais claro). 
+
+No meio da sua jornada, Drofo, ganhou mais uma bota magica, usou sua pocao do sono e consumiu a pocao anti-inteligencia do Torper,
+encontrou um ovo de dragao e uma coxinha.
+Descreva cada uma das acoes acima. utilizando codigo.
+
+Exiba o resultado final de cada um dos inventarios utilizando "document.write"*/ 
+
+                var inventarioDrofo = ["Inventario do Drofo: ", "anel da invisibilidade" , "dois pares de botas magicas", "pocao do sono", "pocao da inocencia, pocao da inocencia"]
+                alert (inventarioDrofo)
+
+                var inventarioTorper = ["Inventario do Torper: " , "capa da invisibilidade", "pedra do despertar", "varinha das varinhas", "pocao da inocencia", "pocao da mentira, pocao da mentira"]
+                alert (inventarioTorper) 
+
+                    inventarioTorper.pop() /* troper bebeu uma pocao da inocencia*/ 
+                    alert (inventarioTorper)
+
+                    inventarioTorper.push('par de botas magicos') /*ganhou um par de botas do Drofo*/
+                    inventarioTorper.push('escudo magico') /*achou um escudo magico*/ 
+                    inventarioTorper.push('espada magica') /*achou uma espada magica*/ 
+                    alert (inventarioTorper)
+                        /*fim invetario torper*/
+
+                    inventarioDrofo.push('botas magicas') /*drofo ganhou botas magicas*/ 
+                    inventarioDrofo.pop('pocao do sono') /*drofo usou sua pocao do sono*/ 
+                    inventarioDrofo.push('ovo de dragao') /*encontrou um ovo de dragao*/ 
+                    inventarioDrofo.push('coxinha') /*coxinha*/ 
+                    alert (inventarioDrofo)
+                    document.write ( " <p> O inventario do Torper ficou assim: </p> " + inventarioTorper + " <p> <br> E o inventario do Drofo ficou assim:</p> " + inventarioDrofo)
+
+
+        
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

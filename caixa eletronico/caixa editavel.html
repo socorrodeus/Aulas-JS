@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <script>
+            
+        var saldo = 1000; //Float 1.36
+        var senha = 3589
+
+        var nomeU = prompt ("informe seu nome");
+            alert (' Olá ' + nomeU + ' é um prazer ter você aqui');
+
+        function inicio() {
+
+        var escolha = parseInt(prompt('Selecione uma opção 1.) Saldo 2.) Extrato 3.) Saque 4.) Deposito 5.) Transferencia 6.) Sair'));
+
+            switch (escolha) {
+                case 1:
+                ver_saldo();
+                break;
+            case 2: 
+                ver_extrato();
+                break;
+            case 3:
+                fazer_saque();
+                break;
+            case 4:
+                fazer_deposito();
+                break;
+            case 5:
+                fazer_transferencias();
+                break;
+            case 6: 
+                sair();
+                break;
+            default:
+                erro();
+            }
+        }       
+
+        function ver_saldo() {
+            var verificacao = parseFloat(prompt('Por favor informe a senha: '));
+            if (verificacao === 3589) {
+                alert ( 'Seu saldo atual é: ' + saldo)
+                inicio();
+            }
+             else {
+            alert('Senha incorreta, tente novamente');
+            inicio();
+                }
+        }
+
+        function fazer_deposito() {
+					var deposito = parseFloat(prompt('Qual o valor para depósito?'));
+					if (deposito <= 0) {
+						alert("Operação não autorizada")
+						inicio ()
+					}
+					if (isNaN(deposito) || deposito === '') {
+						alert('Por favor, informe um número:');
+						fazer_deposito();
+					} else {
+						saldo += deposito;
+						ver_saldo();
+					}
+				}
+
+        function fazer_transferencias() {
+            var confirmacao = parseFloat(prompt('Por favor, informe a senha: '))
+            if (confirmacao === senha) {
+            var conta = parseFloat(prompt('Para qual conta você deseja transferir?'))
+            if (isNaN(conta) || confirmacao === '') {
+                alert('Por favor, informe um número:');
+                fazer_transferencias();
+            }
+            var transferencia = parseFloat(prompt(' Qual o valor da transferência? '));
+            if (transferencia <= 0 || transferencia > saldo) {
+                alert ('Opção não autorizada');
+                fazer_transferencias();
+            }
+            if (isNaN(transferencia) || transferencia === '') {
+                alert('Por favor, informe um número:');
+                fazer_transferencias();
+            }
+            else {
+                (saldo -= transferencia);
+                ver_saldo();
+            }
+            }
+            else {
+                alert ('Senha incorreta, por favor tente novamente');
+                fazer_transferencias();
+            }
+        }
+
+        function fazer_saque() {
+            var verificacao= parseFloat(prompt('Por favor informe a senha: '))
+            if ( verificacao === 3589){
+            var saque = parseFloat(prompt('Qual o valor para saque?'));
+            if (isNaN(saque) || saque === '') {
+                alert('Por favor, informe um número:');
+                fazer_saque()
+            }
+            if (saque > saldo || saque <= 0) {
+                alert ('Opção não autorizada');
+                fazer_saque();
+            } 
+            
+            else {
+                saldo -= saque;
+                
+                ver_saldo();
+            }
+        } else {
+            alert ('Senha incorreta, por favor tente novamente');
+            fazer_saque();
+        }
+        }
+
+        function ver_extrato() {
+            var verificacao = parseFloat(prompt('Por favor, informe a senha: '));
+            if (verificacao === 3589) {
+            alert ("Nos últimos 15 dias dias: \n" + "Pix transf Maria 21/03: -R$50.00 \n" + "Compra-shop 18/03: -R$67.50 \n" + "rshop-cinemark 16/03: -R$98.50 \n" + "Pix transf Marcos 14/03: +R$200 \n");
+                inicio();
+            }
+            else {
+                alert (' Senha incorreta, por favor tente novamente ');
+                inicio();
+                 }
+            }
+        
+
+        function erro() {
+            alert('Por favor, informe um número entre 1 e 6');
+            inicio();
+        }
+
+        function sair() {
+            var confirma = confirm('Você deseja sair? Se sim, obrigada' + ', '+nomeU + ', ' + 'por utilizar nossos serviços.\n' + 'Caso cancele, será redirecionado ao inicio.');
+            if (confirma) {
+                window.close();
+            } else {
+                inicio();
+            }
+        }
+
+    
+        inicio();
+    </script>
+    </head>
+    <body>
+
+    </body>
+    </html>

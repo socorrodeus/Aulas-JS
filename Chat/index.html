@@ -1,0 +1,63 @@
+<!-- ./public/index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Talky</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+    <main>
+        <header>
+          <h1>Talky</h1>
+        </header>
+      
+        <section id="chat" class="chat">
+          <p class="sistema">Lorem: Quer me dizer algo?</p>
+        </section>
+
+        <div class="mensagens-rapidas">
+          <span onclick="mensagem_rapida('Quero Comprar em 24x')">Quero Comprar em 24x</span>
+          <span onclick="mensagem_rapida('Quero Comprar a vista')">Quero Comprar a vista</span>
+          <span onclick="mensagem_rapida('Não tenho interesse em comprar')">Quero Comprar em 24x</span>
+          <span onclick="mensagem_rapida('Falar com atendente')">Quero Comprar a vista</span>
+        </div>
+        <form>
+          <textarea name="talkybox" id="talkybox" cols="30" rows="10">Escreva sua mensagem aqui...</textarea>
+        </form>
+
+        <span id="mensagem_de_erro" class="mensagem_de_erro">Por favor preencha o campo acima</span>
+        
+        <button onclick="envia_mensagem()">Enviar</button>
+      </main>
+
+      <script>
+
+          function envia_mensagem() {
+              var mensagem = document.getElementById("talkybox").value;
+              if (mensagem == "") {
+                alert("Por favor, escreva alguma coisa.");
+                document.getElementById("talkybox").classList.add('erro');
+                document.getElementById("mensagem_de_erro").style.display = "block";
+              } else {
+                mensagem_rapida(mensagem);
+                document.getElementById("talkybox").value = "";
+                document.getElementById("talkybox").classList.remove('erro');
+                document.getElementById("mensagem_de_erro").style.display = "none";
+              }
+              
+          }
+
+          function mensagem_rapida(mensagem) {
+            var chat = document.getElementById("chat");
+            chat.innerHTML += " <p class='usuario'>Camily: "+mensagem +"<span class='hora'>15:00</span></p>";
+          }
+
+          function getDate () {
+
+          }
+      </script>
+  </body>
+</html>

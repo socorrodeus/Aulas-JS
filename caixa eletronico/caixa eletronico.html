@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <script>
+            
+        var saldo = 1000; //Float 1.36
+
+        var nomeU = prompt ("informe seu nome");
+            alert (' Olá ' + nomeU + ' é um prazer ter você aqui');
+
+        function inicio() {
+
+        var escolha = parseInt(prompt('Selecione uma opção 1.) Saldo 2.) Extrato 3.) Saque 4.) Deposito 5.) Transferencia 6.) Sair'));
+
+            if (escolha === 1) {
+                ver_saldo();
+            } else if (escolha === 2) {
+                ver_extrato();
+            } else if (escolha === 3) {
+                fazer_saque();
+            } else if (escolha === 4) {
+                fazer_deposito();
+            } else if (escolha === 5) {
+                fazer_transferencias();
+            } else if (escolha === 6) {
+                sair();
+            } else {
+                erro();
+            }
+        }       
+
+        function ver_saldo() {
+            var verificacao = parseInt(prompt('Por favor informe a senha: '));
+            var senha = 3589
+            if (verificacao != senha) {
+                alert ( 'senha incorreta, tente novamente. ')
+                ver_saldo();
+            }
+             else {
+            alert('Seu saldo atual é: ' + saldo);
+            inicio();
+                }
+        }
+
+        function fazer_deposito() { 
+            var deposito = parseFloat(prompt('Qual o valor para depósito?'));
+            if (isNaN(deposito) || deposito === '') {
+                alert('Por favor, informe um número:');
+                fazer_deposito();
+            }
+
+            if (deposito <= 0) {
+                alert ('Opção não autorizada')
+                fazer_deposito();
+
+            } else {
+                saldo += deposito;
+                ver_saldo();
+            }
+        } 
+
+        function fazer_transferencias() {
+            var senha = 3589
+            var confirmacao = parseInt(prompt('Por favor, informe a senha: '));
+            if (confirmacao != senha) {
+                alert ('Senha incorreta, tente novamente');
+                fazer_transferencias();
+            } else {
+            var transferencia = parseFloat(prompt('Qual valor você deseja transferir?'));
+            }
+            if (isNaN(transferencia) || transferencia === '') {
+                alert('Por favor, informe um número:');
+                fazer_transferencias();
+            }
+
+            if (transferencia <= 0 || transferencia > saldo) {
+                alert ('Opção não autorizada');
+                fazer_transferencias();
+            }
+            else {
+                (transferencia -= saldo);
+                ver_saldo();
+            }
+        }
+
+        function fazer_saque() {
+            var saque = parseFloat(prompt('Qual o valor para saque?'));
+            if (isNaN(saque) || saque === '') {
+                alert('Por favor, informe um número:');
+                fazer_saque()
+            }
+            if (saque > saldo || saque <= 0) {
+                alert ('Opção não autorizada');
+                fazer_saque();
+            } 
+            
+            else {
+                saldo -= saque;
+                
+                ver_saldo();
+            }
+        }
+
+        function ver_extrato() {
+            alert ("Nos últimos 15 dias dias: \n" + "Pix transf Maria 21/03: -R$50.00 \n" + "Compra-shop 18/03: -R$67.50 \n" + "rshop-cinemark 16/03: -R$98.50 \n" + "Pix transf Marcos 14/03: +R$200 \n")
+                
+                ver_saldo();
+            }
+        
+
+        function erro() {
+            alert('Por favor, informe um número entre 1 e 6');
+            inicio();
+        }
+
+        function sair() {
+            var confirma = confirm('Você deseja sair?');
+            if (confirma) {
+                window.close();
+            } else {
+                inicio();
+            }
+        }
+
+    
+        inicio();
+    </script>
+    </head>
+    <body>
+
+    </body>
+    </html>

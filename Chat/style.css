@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .3s ease;
+  font-family: Helvetica, Arial, Sans, sans-serif;
+}
+
+.erro {
+  border:1px solid #ff0000;
+}
+
+.mensagem_de_erro{
+  color: #ff0000;
+  font-weight: bold;
+  display: none;
+}
+
+body {
+  background: #eee;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: calc(100% - 20px);
+  max-width: 500px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 7px 7px 7px #999999;
+  background: #ffffff;
+}
+
+.mensagens-rapidas {
+  margin:1%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.mensagens-rapidas span {
+  margin:1%;
+  padding: 1%;
+  font-size: 11px;
+  cursor: pointer;
+  color: #FFFFFF;
+  background: #7952B3;
+}
+
+.mensagens-rapidas span:hover {
+  background: #333;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 32px;
+  color: #336699;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.chat {
+  content: '';
+  width: 100%;
+  height: calc(100vh - 165px);
+  background: #ccc;
+  padding: 4%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.chat p {
+  min-width:30%;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  color: #ffffff;
+  padding: 5px;
+  margin: 0 0 5px 0;
+  box-shadow: 7px 7px 7px #999999;
+}
+
+.chat p .hora {
+  font-size: 11px;
+  font-style: italic;
+  color: #eee;
+  align-self: flex-end;
+  margin: 2%;
+}
+
+.chat p.usuario {
+  background: #7952B3;
+  align-self:flex-end;
+  
+}
+
+.chat p.sistema {
+  background: #ff0055;
+}
+
+.chat p {
+  background: #7952B3;
+}
+
+.chat p:last-child {
+  background: #7952B3;
+}
+
+textarea{
+    margin: 1%;
+    width:98%;
+    height: 75px;
+    padding: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input, button {
+  width: 30%;
+  color:#FFC107;
+  font: inherit;
+  background: #fff;
+  border: none;
+  margin: 10px auto;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #7952B3;
+  transition: all .2;
+}
+
+button:hover {
+  border-radius: 0px;
+  cursor: pointer;
+  color: #7952B3;
+  background: #FFC107;
+}
+
+@media all and (min-width: 500px) {
+  .chat {
+    height: calc(50vh - 140px);
+  }
+  input {
+    width: calc(100% - 160px);
+  }
+}

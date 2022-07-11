@@ -1,0 +1,36 @@
+<!-- ./public/index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Talky</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+        <header>
+          <h1>Talky</h1>
+        </header>
+      
+        <section id="chat" class="chat">
+          <p><strong>Lorem</strong>: Quer me dizer algo?</p>
+        </section>
+      
+        <form>
+          <textarea name="talkybox" id="talkybox" cols="30" rows="10">
+            Comi bolo essa semana
+          </textarea>
+        </form>
+        <button onclick="envia_mensagem()">Enviar</button>
+      </main>
+
+      <script>
+          function envia_mensagem() {
+              var mensagem = document.getElementById("talkybox").value;
+              var chat = document.getElementById("chat");
+              chat.innerHTML += " <p><strong>Camily</strong>:"+mensagem+"</p>";
+          }
+      </script>
+  </body>
+</html>

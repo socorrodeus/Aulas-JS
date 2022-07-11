@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+            var contagem = 0;   
+            while(contagem <= 10) {
+                document.write('Numero: ' + contagem + "<br>")
+                contagem++;
+
+                //contagem = contagem + 1;
+                //contagem += 1;
+            }
+
+            document.write("Essa contagem acabou");
+        */
+            
+
+
+
+ /*
+            var contagem = 10; 
+            //i = 0; 
+            
+            while(contagem >= 0) {
+                if (contagem > 0) {
+                    document.write('A bomba vai detonar em:' + contagem+"<br>")
+                } else {
+                   document.write("Boooooooooom")
+                }
+
+                contagem--;
+
+                //contagem = contagem - 1;
+                //contagem -= 1;
+            }    
+
+            document.write("Essa contagem acabou");
+*/
+
+
+        
+        var contagem = 0;   
+        var soma = 0;
+        var media = 0;
+        
+        while(contagem <= 20) {
+            soma = soma + parseInt(prompt(" Número "));
+            media = (soma / contagem);
+            contagem = contagem + 1;
+        }
+
+        document.write("A soma é " + soma + " e a media é " + media +". Você informou "+ contagem + "numeros");
+        
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

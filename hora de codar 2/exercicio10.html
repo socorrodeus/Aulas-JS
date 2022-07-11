@@ -1,0 +1,76 @@
+<html> 
+    <head>
+        <script>
+
+         
+            alert("Insira numeros de 0 a 10");
+
+            var numero1 = parseInt(prompt("Digite um numero"));
+            var numero2 = parseInt(prompt("Digite um numero"));
+            var numero3 = parseInt(prompt("Digite um numero"));
+            var numero4 = parseInt(prompt("Digite um numero"));
+            var zerar = 0 
+            
+
+            document.write ("<br> Numeros informados: <br>" + numero1 +", "+ numero2 +", "+ numero3 +", "+ numero4 +"."); 
+
+            if (numero1 < 10 && numero1 > 0) {
+               alert (numero1)
+                
+            }
+            else if (numero1 > 10 || numero1 < 0) {
+                numero1 = zerar
+            }
+            
+
+            if (numero2 < 10 && numero2 > 0) {
+               alert (numero2)
+            }
+            else if (numero2 > 10 || numero2 < 0) {
+                numero2 = zerar
+            }
+
+
+            if (numero3 < 10 && numero3 > 0) {
+              alert  (numero3)
+            }
+            else if (numero3 > 10 || numero3 < 0) {
+                numero3 = zerar
+            }
+
+            if (numero4 < 10 && numero4 > 0) {
+                alert (numero4)
+            }
+            else if (numero4 > 10 || numero4 < 0) {
+                numero4 = zerar
+            }
+
+            document.write("<br> <br> A media dos nemeros eh: " + ((numero1+numero2+numero3+numero4)/4))
+
+            if (((numero1+numero2+numero3+numero4)/4) >= 5) {
+                document.write("<br> <br> vc passou no teste")
+            }
+
+            if (((numero1+numero2+numero3+numero4)/4) < 5) {
+                document.write("<br> <br> tente novamente")
+            }
+            
+        
+
+        </script>
+
+
+
+
+    </head>
+
+    <body>
+        
+
+
+
+    </body>
+
+
+
+</html>

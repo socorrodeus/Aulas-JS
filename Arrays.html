@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var alunoA = "Bryan";
+        var alunoB = "Rian";
+        var alunoC = "Matheus";
+
+        var alunas = ["Yasmin", "Dani", "Noelia"]; // Array é isso aqui
+        alert(alunas);
+
+        alunas[2] = "Isabelle";
+        alert(alunas);
+
+        var alunos = ["Lucas", "Clebs", "Miguel"];
+        //alert(alunas + alunos);
+        
+
+        var criancas_do_gabriel = alunas.concat(alunos);
+        alert(criancas_do_gabriel);
+
+        //Posso remover o último aluno usando pop
+        criancas_do_gabriel.pop();    
+        alert(criancas_do_gabriel);
+
+        //Posso remover o primeiro aluno usando shift
+        criancas_do_gabriel.shift();    
+        alert(criancas_do_gabriel);
+
+        //Adicionar
+        criancas_do_gabriel.push('Marina');    
+        criancas_do_gabriel.push('Vitória');    
+        criancas_do_gabriel.push('Camily');    
+        criancas_do_gabriel.push('Maria Eduarda');    
+        criancas_do_gabriel.push('Sara');    
+        criancas_do_gabriel.push('Noelia');    
+        alert(criancas_do_gabriel);        
+   
+       
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

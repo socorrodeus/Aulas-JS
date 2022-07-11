@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>exercicio 1</title>
+        <script>
+
+            /*1 - Escreva um algoritmo para ler 2 valores informados pelo usuário e se o segundo valor informado for ZERO, 
+            deve ser lido um novo valor, ou seja, para o segundo valor não pode ser aceito o valor zero nem negativo e imprimir o
+             resultado da divisão do primeiro valor lido pelo segundo valor lido */ 
+
+
+            var numero1 = parseInt(prompt(" Informe um número "));
+            var numero2 = parseInt(prompt(" Informe outro número "));
+
+            if (numero2 <= 0) {
+                
+                var numero3 = parseInt(prompt("numeros 0 e negativos não são aceitos, por favor informe outro numero"))
+
+            }
+            
+            if (numero3 > 0) {
+            var soma = (numero1 / numero3)
+            document.write (" O resultado do numero " + numero1 + " divido pelo numero " + numero3 + " é " + soma)
+            }
+
+            if (numero2 > 0) {
+                var soma = (numero1 / numero2)
+            document.write (" O resultado do numero " + numero1 + " divido pelo numero " + numero2 + " é " + soma)
+            }
+        </script>
+    </head>
+    <body>
+        
+
+    </body>
+</html>

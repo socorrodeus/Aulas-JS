@@ -1,0 +1,35 @@
+
+<html>
+<head>
+</head>
+<body>
+    
+    <script>
+var romances = ["Memorial de Aires (1908)", "Ressurreição (1872)", "Casa Velha (1885)","Memórias Póstumas de Brás Cubas(1881)", "Helena (1876)","Quincas Borba (1891)","Esaú e Jacó (1904)","A mão e a luva (1874)","Dom Casmurro (1899)","Iaiá Garcia (1878)"];
+alert("Suas obras de romance são: " + romances);
+
+var poesias = ["Americanas (1875)","Ocidentais (1880)","Falenas (1870)","Crisálidas (1864)","Poesias Completas (1901)"];
+alert("Suas obras de poesia são: " + poesias);
+
+var contos = ["Várias Histórias (1896)","Histórias sem Data (1884)","Papéis Avulsos (1882)","Contos Fluminenses (1870)","Histórias da Meia-Noite (1873)","Relíquias de Casa Velha (1906)","Páginas Recolhidas (1899)"];
+alert("Suas obras de conto são: " + contos);
+
+var livros3 = [];
+
+romances.splice(3,7);
+poesias.splice(3,2);
+contos.splice(3,4);
+
+livros3.push(romances);
+
+livros3.push(poesias);
+
+livros3.push(contos);
+
+alert ( ' Os 3 primeiros livros de cada array são: ' + livros3 );
+
+    </script>
+
+
+</body>
+</html>
